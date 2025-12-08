@@ -41,7 +41,7 @@ const router = express.Router();
 router.get("/", getFoods);
 
 // upload.single("image") → when creating food with image
-router.post("/", upload.single("image"), createFood);
+router.post("/:id", upload.single("image"), createFood);
 
 router.put("/:id", upload.single("image"), updateFood);
 
